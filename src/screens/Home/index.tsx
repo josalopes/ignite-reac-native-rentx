@@ -9,11 +9,11 @@ import {
  Container,
  Header,
  TotalCars,
- HeaderContent
+ HeaderContent, CarList
 } from './styles';
 
 export function Home() {
-  const carDataOne = {
+  const carData = {
     brand: 'audi',
     name: 'RS 5 Coupé',
     rent: {
@@ -41,8 +41,8 @@ export function Home() {
       translucent
     />
 
-    <HeaderContent>
-      <Header>
+    <Header>
+      <HeaderContent>
         <Logo 
           width={RFValue(108)}
           height={RFValue(12)}
@@ -50,11 +50,14 @@ export function Home() {
         <TotalCars>
           Total de 12 carros
         </TotalCars>
-      </Header>
-    </HeaderContent>
+      </HeaderContent>
+    </Header>
 
-    <Car data={carDataOne} />
-    <Car data={carDataTwo} />
+    <CarList
+      data={[1,2,3,4,5,6,7]}
+      keyExtractor={item => String(item)}
+      renderItem={({ item }) => <Car data={carData} />}
+    />
   </Container>
  );
 }
