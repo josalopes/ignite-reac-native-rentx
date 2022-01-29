@@ -1,27 +1,20 @@
 import React from 'react';
 import { RectButtonProps } from 'react-native-gesture-handler';
-import { SvgProps } from 'react-native-svg';
 
 interface Props extends RectButtonProps {
   title: string;
-  svg: React.FC<SvgProps>
+  color?: string;
 }
 
 import {
-  ButtonContainer,
-  ImageContainer,
-  Text
+  Container,
+  Title
 } from './styles';
 
-export function Button({ title, svg: Svg, ...rest }: Props) {
+export function Button({ title, color, ...rest }: Props) {
   return (
-    <ButtonContainer>
-      <ImageContainer>
-
-      </ImageContainer>
-      <Text>
-        {title}
-      </Text>
-    </ButtonContainer>
+    <Container {...rest} color={color}>
+      <Title>{title}</Title>
+    </Container>
   );
 }
