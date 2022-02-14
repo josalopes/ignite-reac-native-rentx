@@ -3,15 +3,18 @@ import { format } from 'date-fns';
 import React, { useState } from 'react';
 import { StatusBar } from 'react-native';
 import { useTheme } from 'styled-components';
+
 import ArrowSvg from '../../assets/arrow.svg';
 import { BackButton } from '../../components/BackButton';
 import { Button } from '../../components/Button';
+
 import {
   Calendar,
   DayProps,
   generateInterval,
   MarkedDateProps
 } from '../../components/Calendar';
+
 import { CarDTO } from '../../dtos/CarDTO';
 import { getPlatformDate } from '../../utils/getPlatformDate';
 import {
@@ -25,8 +28,6 @@ import {
   Header,
   RentalPeriod, Title
 } from './styles';
-
-
 
 interface RentalPeriod {
   start: number,

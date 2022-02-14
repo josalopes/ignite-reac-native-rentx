@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
-import { RFValue } from 'react-native-responsive-fontsize';
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
+import { wp, hp } from '../../utils/dimen';
 
 export const Container = styled(RectButton)`
  width: 100%;
@@ -66,8 +67,8 @@ export const Type = styled.View`
 `;
 
 export const CarImage = styled.Image`
-  width: 187px;
-  height: 85px;
+  width: ${wp(187)}px;
+  height: ${hp(85)}px;
 
 `;
 
