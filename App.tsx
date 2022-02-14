@@ -1,6 +1,7 @@
-import { StatusBar } from 'react-native';
-// import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
+
 import React from 'react';
+import { StatusBar } from 'react-native';
 
 import { ThemeProvider } from 'styled-components';
 import AppLoading from 'expo-app-loading';
@@ -15,12 +16,16 @@ import {
   Archivo_600SemiBold
 } from '@expo-google-fonts/archivo';
 
+
 import theme from './src/styles/theme'
-import { Home } from './src/screens/Home';
-import { CarDetails } from './src/screens/CarDetails';
-import { Schedule } from './src/screens/Schedule';
-import { ScheduleDetails } from './src/screens/ScheduleDetails';
-import { ScheduleComplete } from './src/screens/ScheduleComplete';
+
+import { Routes } from './src/routes/';
+
+// import { Home } from './src/screens/Home';
+// import { CarDetails } from './src/screens/CarDetails';
+// import { Schedule } from './src/screens/Schedule';
+// import { ScheduleDetails } from './src/screens/ScheduleDetails';
+// import { ScheduleComplete } from './src/screens/ScheduleComplete';
 
 
 export default function App() {
@@ -41,7 +46,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar barStyle="light-content"/>
-      <ScheduleComplete />
+      <Routes />
     </ThemeProvider>
   );
 }

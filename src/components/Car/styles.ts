@@ -1,30 +1,25 @@
-import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
+import { RectButton } from 'react-native-gesture-handler';
+import { RFValue } from 'react-native-responsive-fontsize';
 
-export const Container = styled.View`
- /* flex: 1; */
+export const Container = styled(RectButton)`
+ width: 100%;
+ height: 126px;
+ background-color: ${({ theme}) => theme.colors.background_secondary};
 
  flex-direction: row;
  justify-content: space-between;
+ align-items: center;
 
- padding: 17px 24px;
+ padding: 24px;
  margin-bottom: 16px;
-
- width: 100%;
- /* width: 343px; */
- height: 126px;
- background-color: ${({ theme}) => theme.colors.background_secondary};
- `;
+`;
 
 export const Details = styled.View`
-/* background-color: red; */
-/* justify-content: space-between; */
 `;
 
 export const CarTitleContainer = styled.View`
-  /* background-color: green; */
-  
-  `;
+`;
 
 
 export const Brand = styled.Text`
@@ -33,7 +28,7 @@ export const Brand = styled.Text`
   color: ${({ theme}) => theme.colors.text_detail};
 
   text-transform: uppercase;
-  `;
+`;
 
 export const Name = styled.Text`
   font-size: ${RFValue(15)}px;
@@ -64,15 +59,15 @@ export const Price = styled.Text`
   font-size: ${RFValue(15)}px;
   font-family: ${({ theme }) => theme.fonts.secondary_500};
   color: ${({ theme}) => theme.colors.main};
-  `;
+`;
 
-  export const Type = styled.View`
-  
-  `;
+export const Type = styled.View`
 
-  export const CarImage = styled.Image`
-    width: 187px;
-    height: 85px;
+`;
 
-  `;
+export const CarImage = styled.Image`
+  width: 187px;
+  height: 85px;
+
+`;
 

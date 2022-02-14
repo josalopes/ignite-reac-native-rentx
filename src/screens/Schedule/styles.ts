@@ -1,6 +1,6 @@
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
-import styled, { css } from 'styled-components/native';
 import { RFValue } from 'react-native-responsive-fontsize';
+import styled, { css } from 'styled-components/native';
 
 interface DateValueContainerProps {
   selected?: boolean;
@@ -57,7 +57,7 @@ export const DateTitle = styled.Text`
 
 `;
 
-export const DateValueContainer = styled.View<DateValueContainerProps>`  
+export const DateValueContainer = styled.View<DateValueContainerProps>`
   ${({ selected, theme }) => !selected && css`
     border-bottom-width: 1px;
     border-bottom-color: ${theme.colors.text};
